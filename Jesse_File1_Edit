@@ -1,0 +1,95 @@
+"""
+Authors: Jesse Contreras, Damini Gopal
+Serial Numbers: 22, 33
+Spring 2020 - CS 1342 - 251
+Homework Number 5
+Due Date : April, 20th 2020
+"""
+
+first_num = int() #int input that tells the exclusive lower bound of the range
+                  #cannot be negative, more than, or equal to num2
+
+second_num = int() #int input that tells the exclusive upper bound of the range 
+                   #cannot be negative, less than, or equal to num1
+
+format_string = str() #str that formats the lists of numbers
+
+total = int() #int that is the calculated sum of the even then odd numbers
+
+is_prime = bool() #true or false condition that shows if a number is prime
+
+divisor = int()
+
+import sys
+
+def evens(counter,end): #lists all of the even numbers between first and second numbers
+    format_string = ""
+    while(counter != end+1):
+        if (counter %2 == 0): format_string += str(counter) + ","
+        counter += 1
+    print("1. All Even Numbers : ",format_string[:len(format_string)-1])
+
+def odds(counter,end): #lists all of the odd numbers between first and second num
+    format_string = ""
+    while(counter != end+1):
+        if (counter%2==1): format_string += str(counter) + ","
+        counter += 1
+    print("2. All Odds Numbers : ",format_string[:len(format_string)-1])
+
+def sum_evens(counter,end): #Adds all even numbers between first and second num
+    total = 0
+    while(counter != end+1):
+        if(counter%2==0): total += counter
+        counter += 1
+    print("3. Sum Of All Even Numbers : ",total)
+
+def sum_odds(counter,end): #Adds all odd numbers between first and second num
+    total = 0
+    while(counter != end+1):
+        if(counter%2==1): total += counter
+        counter += 1
+    print("4. Sum Of All Odd Numbers : ", total)
+
+def primes(counter,end): #lists all of the prime numbers between first and second num
+    format_string = ""
+
+    while(counter != end+1):
+        divisor = 2
+        is_prime = True
+        
+        while(divisor < counter):            
+            if(counter % divisor == 0): is_prime = False
+            divisor += 1
+
+        if (counter == 0 or counter == 1): is_prime = False    
+        if (is_prime): format_string += str(counter) + ","
+        counter += 1
+        
+    print("5. All Prime Numbers : ", format_string[:len(format_string)-1])
+
+def ints_cubed(minimum, maximum): #lists all of the cube numbers between first and second num
+    print("6. Number    Cube:\n")
+    while(minimum < maximum+1):
+        print("     ",minimum,"     ", minimum**3)
+        minimum += 1
+    
+
+first_num = int(input("Enter The First Number: " ))
+second_num = int(input("Enter The Second Number: "))
+
+print("You Entered:", first_num, "and", second_num)
+
+if (second_num < first_num):
+    print("Error: First Number Must Be < Second Number.")
+    print("\n\nProgram is implement by Jesse Contreras and Damini Gopal\n4-20-20")
+if (first_num < 0 or second_num < 0):
+     print("Error -Invalid Number: Numbers muse be Positive.")
+     print("\n\nProgram is implement by Jesse Contreras and Damini Gopal\n4-20-20")
+     sys.exit()
+
+evens(first_num, second_num)
+odds(first_num, second_num)
+sum_evens(first_num, second_num)
+sum_odds(first_num, second_num)
+primes(first_num, second_num)
+ints_cubed(first_num, second_num)
