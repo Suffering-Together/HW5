@@ -1,7 +1,9 @@
 """
-
-
-
+Authors: Jesse Contreras, Damini Gopal
+Serial Numbers: 22, 33
+Spring 2020 - CS 1342 - 251
+Homework Number 5
+Due Date : April, 20th 2020
 
 """
     
@@ -58,7 +60,7 @@ def display_ints_cubes(minimum, maximum):
         print("     "+ str(minimum).ljust(9) + str(minimum**3))
         minimum += 1
     
-print("Opportunities to practice functions in Python by Jesse Contreras and Damini Gopall\n")
+print("Opportunities to practice functions in Python by Jesse Contreras and Damini Gopal\n")
 firstNum = int(input("Enter The First Number : "))
 secondNum = int(input("Enter The Second Number : "))
 print("\nYou entered :",firstNum,"and",secondNum,"\n")
