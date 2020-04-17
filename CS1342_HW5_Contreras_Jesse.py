@@ -1,5 +1,5 @@
 """
-Your Name/s : Jesse Conteras and Damini Gopal
+Your Name/s : Jesse Contreras and Damini Gopal
 Serial Number/s : 22, 33
 Course / Section Number : CS1342 / 251
 Homework Number 5
